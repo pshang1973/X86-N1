@@ -12,7 +12,3 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.251/g' package/base-files/files/bin/config_generate
 git clone https://github.com/tuanqing/install-program package/install-program
-git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
