@@ -11,4 +11,4 @@
 #
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.251/g' package/base-files/files/bin/config_generate
-git clone https://github.com/tuanqing/install-program package/install-program
+#git clone https://github.com/tuanqing/install-program package/install-program
