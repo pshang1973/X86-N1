@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - 'X86-Original.yml'
+      - 'X86-Original.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -18,7 +18,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: orgfeeds.conf.default
-  CONFIG_FILE: X86-Original.yml
+  CONFIG_FILE: X86-Original.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
