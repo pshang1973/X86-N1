@@ -1,13 +1,3 @@
-#
-# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# Description: Build OpenWrt using GitHub Actions
-#
-
 name: Build OpenWrt
 
 on:
@@ -18,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - 'N1-mini.config'
+      - 'X86-Original.yml'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -27,8 +17,8 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-19.07
-  FEEDS_CONF: Orgfeeds.conf.default
-  CONFIG_FILE: X86-Original.config
+  FEEDS_CONF: orgfeeds.conf.default
+  CONFIG_FILE: X86-Original.yml
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
@@ -152,4 +142,3 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
-
